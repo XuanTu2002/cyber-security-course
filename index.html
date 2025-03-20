@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Access Control</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>File Access Control</h1>
+        <div class="file-container">
+            <div class="file" id="file1">
+                <h2>Document 1 - General Information</h2>
+                <p id="file1-content">This file contains general information.</p>
+            </div>
+            <div class="file" id="file2">
+                <h2>Document 2 - Sensitive Information</h2>
+                <p id="file2-content">This file contains sensitive information. You can only view it during working hours (9am-6pm GMT+7).</p>
+                <button id="file2-btn" onclick="checkFileAccess()">Access File</button>
+            </div>
+        </div>
+
+        <div id="password-modal" class="modal">
+            <div class="modal-content">
+                <h3>Please enter the admin password</h3>
+                <input type="password" id="admin-password" placeholder="Enter password">
+                <button onclick="verifyPassword()">Submit</button>
+                <button onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
